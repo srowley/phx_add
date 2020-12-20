@@ -1,21 +1,21 @@
 # Phx.Add
 
-**TODO: Add description**
+A simple example of how composable custom Phoenix generators might work for discussion
+purposes. Tested in the sense that I followed the instructions and I could use Tailwind
+and Alpine in the app afterwards.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `phx_add` to your list of dependencies in `mix.exs`:
+Install locally with `mix archive.install github srowley/phx_add`.
 
-```elixir
-def deps do
-  [
-    {:phx_add, "~> 0.1.0"}
-  ]
-end
+## Usage
+
+```
+mix phx.new my_app --live
+cd my_app
+mix phx.add.tailwind
+mix phx.add.alpine
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/phx_add](https://hexdocs.pm/phx_add).
-
+Note that the Alpine generator assumes the new app is a Live View app; it would be easy
+to fix so that it worked for a regular app.
